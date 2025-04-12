@@ -62,11 +62,12 @@ namespace SPT.Launcher
             LogManager.Instance.Info($">>> Account: {account.username}");
             LogManager.Instance.Info($">>> Server : {server.backendUrl}");
             // setup directories
-            if (IsInstalledInLive())
+
+            /*if (IsInstalledInLive())
             {
                 LogManager.Instance.Error("[LaunchGame] Installed in Live :: YES");
                 return GameStarterResult.FromError(-1);
-            }
+            }*/
 
             // Confirm core.dll version matches version server is running
             if (IsCoreDllVersionMismatched(gamePath))
